@@ -1,0 +1,1299 @@
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+/* Desktop first — значения по умолчанию для 1440px и выше */
+
+/* Tablet / Small Desktop (1024px) */
+@media (max-width: 1024px) {
+    .wrapper {
+        max-width: 1024px;
+    }
+
+    .site-header__inner {
+        gap: 32px;
+    }
+
+    .main-nav__list {
+        gap: 16px;
+    }
+
+    .posts-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .site-footer__top {
+        justify-content: flex-start;
+        gap: 21px;
+    }
+
+    .footer-nav {
+        width: 247px;
+        grid-template-columns: repeat(2, auto);
+        gap: 30px;
+    }
+
+    .newsletter {
+        width: 450px;
+    }
+
+    .social-block {
+        width: 221px;
+        flex-shrink: 0;
+    }
+
+    /* Article page */
+    .deco-blob,
+    .promo-block,
+    .global-divider,
+    .topic-tags,
+    .site-footer-wave {
+        display: none;
+    }
+
+    .article-grid {
+        grid-template-columns: minmax(0, 1fr) 222px;
+        column-gap: 24px;
+    }
+
+    .full-article__source {
+        display: inline;
+    }
+
+    .toc__item--hidden-tablet {
+        display: none;
+    }
+
+    .toc {
+        width: 588px;
+        max-width: 100%;
+    }
+
+    .side-card--blue,
+    .psychologist-card,
+    .gift-card,
+    .video-card {
+        width: 222px;
+    }
+
+    .side-card--blue {
+        padding: 24px;
+    }
+
+    .side-card__img {
+        width: 181px;
+        height: auto;
+    }
+
+    .gift-card {
+        height: 292px;
+        background: radial-gradient(ellipse 185% 30% at 50% 0%, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0.20) 28%, rgba(255, 255, 255, 0) 48%), #2963a3;
+    }
+
+    .gift-card__title {
+        width: 180px;
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .video-card {
+        min-height: 304px;
+        padding: 24px;
+    }
+
+    .video-card__content {
+        width: 174px;
+    }
+
+    .video-card__gift--left {
+        left: 50px;
+        width: 92px;
+        height: auto;
+    }
+}
+
+/* Tablet (768px) - burger appears */
+@media (max-width: 768px) {
+    .wrapper {
+        max-width: 768px;
+        padding: 0 20px;
+    }
+
+    .site-header__inner {
+        justify-content: space-between;
+    }
+
+    .main-nav,
+    .btn-primary {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: flex;
+    }
+
+    .posts-section {
+        padding-bottom: 60px;
+    }
+
+    .posts-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .post-card--expanded {
+        grid-column: span 2;
+        min-height: 520px;
+    }
+
+    .post-card--expanded .post-card__visual {
+        height: 320px;
+    }
+
+    .post-card--compact {
+        grid-column: span 1;
+        min-height: 380px;
+    }
+
+    .post-card--compact .post-card__visual {
+        height: 200px;
+    }
+
+    .post-card__info {
+        padding: 14px;
+    }
+
+    .post-card__title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .site-footer__inner {
+        padding-top: 35px;
+        padding-bottom: 23px;
+    }
+
+    .site-footer__top {
+        display: grid;
+        grid-template-columns: 221px 1fr;
+        column-gap: 40px;
+        row-gap: 24px;
+        align-items: start;
+        padding-bottom: 20px;
+    }
+
+    .footer-nav {
+        width: 221px;
+        grid-template-columns: repeat(2, auto);
+        gap: 16px 30px;
+    }
+
+    .newsletter {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .newsletter__form {
+        width: 100%;
+        max-width: 384px;
+    }
+
+    .social-block {
+        grid-column: 1 / 2;
+        width: 221px;
+        margin-top: 0;
+    }
+
+    .site-footer__bottom {
+        gap: 40px;
+        padding-top: 16px;
+    }
+
+    /* Article tablet */
+    .article-grid {
+        display: block;
+        padding-top: 16px;
+        padding-bottom: 0;
+    }
+
+    .side-panel {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 16px;
+        margin-top: 24px;
+        margin-bottom: 60px;
+    }
+
+    .side-card--blue,
+    .psychologist-card,
+    .gift-card,
+    .video-card {
+        width: 100%;
+    }
+
+    .side-card--blue,
+    .psychologist-card {
+        min-height: 460px;
+    }
+
+    .side-card--blue {
+        padding: 20px;
+    }
+
+    .side-card__img {
+        width: 200px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .gift-card {
+        height: 240px;
+    }
+
+    .gift-card__title {
+        width: 200px;
+        padding-top: 40px;
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .video-card {
+        height: 240px;
+        min-height: 0;
+        padding: 20px;
+    }
+
+    .video-card__content {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .video-card__title {
+        margin: 0 0 8px;
+        font-size: 20px;
+        line-height: 28px;
+        white-space: normal;
+    }
+
+    .video-card__text {
+        width: 100%;
+        margin: 0 0 8px;
+        font-size: 12px;
+    }
+
+    .video-card__price {
+        margin: 0 0 10px;
+        font-size: 20px;
+    }
+
+    .video-card__btn {
+        width: 100px;
+        min-height: 40px;
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .video-card__decor {
+        right: 0;
+        bottom: 0;
+        width: 160px;
+        height: 100px;
+    }
+
+    .video-card__gift--left {
+        left: 15px;
+        width: 90px;
+        height: auto;
+    }
+
+    .video-card__gift--right {
+        left: 40px;
+        right: auto;
+        bottom: 0;
+        width: 110px;
+        height: auto;
+    }
+
+    .site-footer-wave {
+        display: none;
+    }
+
+    /* Дополнительные правки для 768px (футер) */
+    .footer-nav__link {
+        font-size: 13px;
+    }
+
+    .newsletter__title {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+/* Mobile (414px) */
+@media (max-width: 414px) {
+    .wrapper {
+        max-width: 414px;
+        padding: 0 16px;
+    }
+
+    .site-header__inner {
+        min-height: 64px;
+    }
+
+    .brand__logo {
+        width: 48px;
+        height: auto;
+    }
+
+    .posts-section {
+        padding-top: 16px;
+        padding-bottom: 50px;
+    }
+
+    .trail {
+        margin-bottom: 24px;
+    }
+
+    .posts-section__heading {
+        margin-bottom: 20px;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .topic-filters {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 8px;
+        margin-right: -16px;
+        margin-bottom: 16px;
+        padding-bottom: 8px;
+    }
+
+    .topic-filters__pill {
+        flex-shrink: 0;
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .post-card--expanded,
+    .post-card--compact {
+        grid-column: auto;
+        min-height: auto;
+    }
+
+    .post-card__visual,
+    .post-card--expanded .post-card__visual,
+    .post-card--compact .post-card__visual {
+        height: 200px;
+    }
+
+    .post-card__info {
+        padding: 12px;
+    }
+
+    .post-card__title {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .post-card__desc {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .posts-grid .post-card:nth-child(n+5) {
+        display: none;
+    }
+
+    .btn-load-more {
+        margin-top: 28px;
+        width: 160px;
+        min-height: 44px;
+        font-size: 14px;
+    }
+
+    .site-footer__inner {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .site-footer__top {
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 16px;
+    }
+
+    .footer-nav {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 40px;
+    }
+
+    .newsletter {
+        width: 100%;
+    }
+
+    .newsletter__title {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .newsletter__form {
+        width: 100%;
+    }
+
+    .newsletter__input {
+        width: calc(100% - 56px);
+        height: 44px;
+        font-size: 14px;
+    }
+
+    .newsletter__btn {
+        width: 56px;
+        height: 44px;
+    }
+
+    .social-block {
+        width: 100%;
+    }
+
+    .social-block__skolkovo-img {
+        width: 160px;
+    }
+
+    .site-footer__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding-top: 16px;
+    }
+
+    .copyright,
+    .footer-legal {
+        font-size: 12px;
+    }
+
+    /* Article mobile */
+    .full-article__title {
+        margin-bottom: 8px;
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .full-article__meta {
+        margin-bottom: 12px;
+        font-size: 12px;
+    }
+
+    .full-article__hero {
+        height: 200px;
+        margin-bottom: 16px;
+    }
+
+    .trail {
+        margin-bottom: 20px;
+    }
+
+    .trail__list {
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .trail__item {
+        flex: 0 0 auto;
+        font-size: 10px;
+    }
+
+    .trail__item:last-child {
+        min-width: 0;
+        flex: 1 1 auto;
+        overflow: hidden;
+    }
+
+    .trail__item:last-child .trail__current {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .content-block__title {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 12px;
+    }
+
+    .content-block__text {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 16px;
+    }
+
+    .image-figure {
+        margin-top: 16px;
+    }
+
+    .image-figure__img {
+        height: 200px;
+    }
+
+    .image-figure__caption {
+        margin-top: 8px;
+        font-size: 12px;
+    }
+
+    .center-quote {
+        margin: 20px 0;
+        padding: 20px 12px;
+    }
+
+    .center-quote__text {
+        width: 100%;
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .split-layout,
+    .split-layout--small {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .split-layout__img {
+        width: 100%;
+        height: 280px;
+        margin: 0 0 12px;
+    }
+
+    .split-layout__img--small {
+        width: 100%;
+        height: 180px;
+        margin: 0 0 12px;
+    }
+
+    .split-layout__content {
+        width: 100%;
+    }
+
+    .split-layout__text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .two-columns {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .two-columns__col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .two-columns__col:last-child {
+        margin-bottom: 0;
+    }
+
+    .two-columns__img {
+        height: 180px;
+        margin-bottom: 12px;
+    }
+
+    .two-columns__text {
+        font-size: 14px;
+        line-height: 22px;
+        margin: 0;
+    }
+
+    .exercise-card {
+        padding: 16px;
+    }
+
+    .exercise-card__title {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .exercise-card__text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .side-panel {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+
+    .side-card--blue,
+    .psychologist-card,
+    .gift-card,
+    .video-card {
+        width: 100%;
+        min-height: 0;
+        margin-bottom: 20px;
+    }
+
+    .side-card--blue {
+        padding: 20px;
+    }
+
+    .side-card__img {
+        width: 180px;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto 16px;
+    }
+
+    .side-card__title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .side-card__text {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .psychologist-card {
+        padding: 20px;
+    }
+
+    .psychologist-card__avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .gift-card {
+        height: 260px;
+    }
+
+    .gift-card__title {
+        width: 100%;
+        font-size: 24px;
+        line-height: 32px;
+        padding-top: 30px;
+    }
+
+    .video-card {
+        height: 280px;
+        min-height: 0;
+        padding: 20px;
+    }
+
+    .video-card__content {
+        width: 100%;
+    }
+
+    .video-card__title {
+        font-size: 18px;
+        line-height: 26px;
+        white-space: normal;
+    }
+
+    .video-card__text {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .video-card__price {
+        font-size: 20px;
+    }
+
+    .promo-block__title {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 16px;
+    }
+
+    .promo-block__text {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+
+    .promo-block__btn {
+        min-width: 200px;
+        min-height: 50px;
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Small Mobile (390px) - iPhone 12/13/14 Pro */
+@media (max-width: 390px) {
+    .wrapper {
+        padding: 0 15px;
+    }
+
+    .site-footer__top {
+        gap: 18px;
+    }
+
+    .footer-nav {
+        gap: 14px 20px;
+    }
+
+    .footer-nav__link {
+        font-size: 12px;
+    }
+
+    .newsletter__title {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .newsletter__input {
+        width: calc(100% - 52px);
+        height: 42px;
+        font-size: 13px;
+    }
+
+    .newsletter__btn {
+        width: 52px;
+        height: 42px;
+    }
+
+    .newsletter__agreement {
+        font-size: 9px;
+        line-height: 12px;
+    }
+
+    .social-block__skolkovo-img {
+        width: 150px;
+    }
+
+    .social-links {
+        gap: 14px;
+    }
+
+    .social-links__item img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .site-footer__bottom {
+        gap: 12px;
+    }
+
+    .copyright,
+    .footer-legal {
+        font-size: 10px;
+    }
+
+    .post-card__title {
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+    .btn-load-more {
+        width: 150px;
+        min-height: 42px;
+        font-size: 13px;
+    }
+
+    .full-article__title {
+        font-size: 26px;
+        line-height: 34px;
+    }
+}
+
+/* Small Mobile (375px) - iPhone SE 2-3, iPhone 12/13/14 mini */
+@media (max-width: 375px) {
+    .wrapper {
+        padding: 0 14px;
+    }
+
+    .site-footer__top {
+        gap: 16px;
+    }
+
+    .footer-nav {
+        gap: 12px 16px;
+    }
+
+    .footer-nav__link {
+        font-size: 11px;
+    }
+
+    .newsletter__title {
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    .newsletter__input {
+        width: calc(100% - 48px);
+        height: 40px;
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+
+    .newsletter__btn {
+        width: 48px;
+        height: 40px;
+        background-size: 16px;
+    }
+
+    .newsletter__agreement {
+        font-size: 8px;
+        line-height: 11px;
+    }
+
+    .social-block__skolkovo-img {
+        width: 130px;
+    }
+
+    .social-links {
+        gap: 12px;
+    }
+
+    .social-links__item img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .site-footer__bottom {
+        gap: 10px;
+    }
+
+    .copyright,
+    .footer-legal {
+        font-size: 9px;
+    }
+
+    .post-card__title {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .post-card__desc {
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .btn-load-more {
+        width: 140px;
+        min-height: 40px;
+        font-size: 12px;
+    }
+
+    .full-article__title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .full-article__hero {
+        height: 180px;
+    }
+
+    .content-block__title {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .promo-block__title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .promo-block__btn {
+        min-width: 160px;
+        min-height: 44px;
+        font-size: 12px;
+        padding: 10px 16px;
+    }
+}
+
+/* Small Mobile (320px) */
+@media (max-width: 320px) {
+    .wrapper {
+        max-width: 320px;
+        padding: 0 12px;
+    }
+
+    .site-header__inner {
+        min-height: 56px;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .brand__logo {
+        width: 40px;
+    }
+
+    .mobile-toggle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .posts-section {
+        padding-bottom: 40px;
+    }
+
+    .trail {
+        margin-bottom: 16px;
+    }
+
+    .posts-section__heading {
+        margin-bottom: 16px;
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .topic-filters {
+        margin-right: -12px;
+        margin-bottom: 12px;
+    }
+
+    .topic-filters__pill {
+        font-size: 11px;
+        padding: 4px 6px;
+    }
+
+    .posts-grid {
+        gap: 12px;
+    }
+
+    .post-card__visual {
+        height: 160px;
+    }
+
+    .post-card__info {
+        padding: 10px;
+    }
+
+    .post-card__title {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .post-card__desc {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .post-card__byline {
+        font-size: 10px;
+    }
+
+    .post-card__date {
+        font-size: 10px;
+    }
+
+    .btn-load-more {
+        width: 140px;
+        min-height: 40px;
+        margin-top: 20px;
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+
+    /* Footer fixes for 320px */
+    .site-footer__inner {
+        padding: 20px 12px;
+    }
+
+    .site-footer__top {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding-bottom: 12px;
+    }
+
+    .footer-nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 16px;
+        width: 100%;
+    }
+
+    .footer-nav__link {
+        font-size: 11px;
+    }
+
+    .newsletter {
+        width: 100%;
+    }
+
+    .newsletter__title {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .newsletter__form {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .newsletter__input {
+        width: 100%;
+        border-radius: 4px;
+        margin-bottom: 8px;
+        font-size: 11px;
+        height: 36px;
+    }
+
+    .newsletter__btn {
+        width: 100%;
+        border-radius: 4px;
+        height: 36px;
+        background-size: 16px;
+    }
+
+    .newsletter__agreement {
+        font-size: 8px;
+        line-height: 10px;
+    }
+
+    .social-block {
+        width: 100%;
+    }
+
+    .social-block__skolkovo-img {
+        width: 120px;
+    }
+
+    .social-links {
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    .social-links__item img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .site-footer__bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        text-align: center;
+        padding-top: 12px;
+    }
+
+    .copyright,
+    .footer-legal {
+        font-size: 8px;
+    }
+
+    /* Article extra small */
+    .full-article__title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .full-article__hero {
+        height: 160px;
+    }
+
+    .content-block__title {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .content-block__text {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .image-figure__img {
+        height: 160px;
+    }
+
+    .split-layout__img {
+        height: 220px;
+    }
+
+    .split-layout__img--small {
+        height: 140px;
+    }
+
+    .two-columns__img {
+        height: 140px;
+    }
+
+    .side-card__title {
+        font-size: 15px;
+    }
+
+    .psychologist-card__name {
+        font-size: 18px;
+    }
+
+    .gift-card__title {
+        font-size: 20px;
+    }
+
+    .video-card {
+        height: 260px;
+    }
+
+    .video-card__title {
+        font-size: 16px;
+    }
+
+    .promo-block__title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .promo-block__text {
+        font-size: 14px;
+    }
+
+    .promo-block__btn {
+        min-width: 180px;
+        min-height: 44px;
+        font-size: 12px;
+        padding: 12px 16px;
+    }
+
+    .side-panel {
+        margin-bottom: 40px;
+    }
+}
+/* Все устройства меньше 420px — универсальные правки для футера */
+@media (max-width: 480px) {
+    .site-footer__inner {
+        padding: 20px 16px;
+    }
+
+    .site-footer__top {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 16px;
+    }
+
+    .footer-nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px 20px;
+        width: 100%;
+    }
+
+    .footer-nav__link {
+        font-size: 12px;
+    }
+
+    .newsletter {
+        width: 100%;
+    }
+
+    .newsletter__title {
+        font-size: 13px;
+        line-height: 18px;
+        max-width: 100%;
+    }
+
+    .newsletter__form {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .newsletter__input {
+        width: 100%;
+        border-radius: 4px;
+        margin-bottom: 8px;
+        height: 40px;
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+
+    .newsletter__btn {
+        width: 100%;
+        border-radius: 4px;
+        height: 40px;
+        background-size: 16px;
+    }
+
+    .newsletter__agreement {
+        font-size: 9px;
+        line-height: 12px;
+    }
+
+    .social-block {
+        width: 100%;
+    }
+
+    .social-block__skolkovo-img {
+        width: 140px;
+    }
+
+    .social-links {
+        justify-content: flex-start;
+        gap: 14px;
+    }
+
+    .social-links__item img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .site-footer__bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+        padding-top: 12px;
+    }
+
+    .copyright,
+    .footer-legal {
+        font-size: 10px;
+    }
+}
+/* Mobile menu open state */
+.main-nav.show {
+    display: flex !important;
+    position: fixed;
+    top: 76px;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary.show {
+    display: flex !important;
+}
+
+.main-nav.show .main-nav__list {
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .main-nav.show {
+        top: 64px;
+    }
+}
+
+@media (max-width: 414px) {
+    .main-nav.show {
+        top: 64px;
+    }
+}
+
+@media (max-width: 375px) {
+    .main-nav.show {
+        top: 60px;
+    }
+}
+
+@media (max-width: 320px) {
+    .main-nav.show {
+        top: 56px;
+    }
+}

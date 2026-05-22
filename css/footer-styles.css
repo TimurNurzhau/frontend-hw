@@ -1,0 +1,185 @@
+/* ============================================
+   FOOTER STYLES
+   ============================================ */
+
+.site-footer {
+    background-color: #2963a3;
+}
+
+.site-footer__inner {
+    padding-top: 40px;
+    padding-bottom: 17px;
+}
+
+.site-footer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(157, 157, 157, 0.3);
+}
+
+.footer-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 111px);
+    gap: 93px;
+    width: 310px;
+}
+
+.footer-nav__col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav__link {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #ffffff;
+    transition: opacity 0.2s ease;
+}
+
+.footer-nav__link:hover {
+    opacity: 0.8;
+}
+
+.newsletter {
+    width: 486px;
+}
+
+.newsletter__title {
+    max-width: 356px;
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #ffffff;
+}
+
+.newsletter__form {
+    display: flex;
+    width: 384px;
+    margin-bottom: 8px;
+}
+
+.newsletter__input {
+    width: 320px;
+    height: 48px;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+.newsletter__input::placeholder {
+    color: #9d9d9d;
+}
+
+.newsletter__btn {
+    width: 64px;
+    height: 48px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #16c8bb;
+    background-image: url("../icons/arrow-next.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.newsletter__btn:hover {
+    background-color: #0faaa0;
+}
+
+.newsletter__agreement {
+    max-width: 486px;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.25px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.social-block {
+    width: 221px;
+    min-height: 122px;
+}
+
+.social-block__skolkovo {
+    display: inline-flex;
+    margin-bottom: 40px;
+}
+
+.social-block__skolkovo-img {
+    display: block;
+    width: 221px;
+    height: auto;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-links__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    transition: opacity 0.2s ease;
+}
+
+.social-links__item:hover {
+    opacity: 0.8;
+}
+
+.social-links__item img {
+    width: 32px;
+    height: 32px;
+}
+
+.site-footer__bottom {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding-top: 16px;
+}
+
+.copyright,
+.footer-legal {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #ffffff;
+    transition: opacity 0.2s ease;
+}
+
+.footer-legal:hover {
+    opacity: 0.8;
+}
+
+/* ============================================
+   ДОБАВЛЕНО: ЗЕЛЁНЫЙ ЭФФЕКТ ПРИ КЛИКЕ НА ПОЛЕ EMAIL
+   ============================================ */
+
+.newsletter__input:focus {
+    outline: none;
+    border: 2px solid #03b2a5;
+    box-shadow: 0 0 0 3px rgba(3, 178, 165, 0.25);
+}
