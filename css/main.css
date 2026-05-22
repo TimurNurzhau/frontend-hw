@@ -127,3 +127,21 @@ img {
 .trail__current {
     color: rgba(51, 51, 51, 0.7);
 }
+
+/* Сдвигаем "Главная" на пару пикселей вправо */
+.trail__list {
+    padding-left: 6px;
+}
+
+/* Сдвигаем стрелку и "Блог" влево на 2px */
+.trail__item:not(:first-child) {
+    position: relative;
+    left: -2px;
+}
+
+/* Сдвигаем только стрелку между "Главная" и "Блог" влево на 2px */
+.trail__item:first-child::after {
+    position: relative;
+    left: -2px;
+    display: inline-block;
+}
