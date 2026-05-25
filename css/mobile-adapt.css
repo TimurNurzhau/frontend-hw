@@ -123,6 +123,7 @@
         justify-content: space-between;
     }
 
+    /* На мобильных скрываем навигацию и кнопку */
     .main-nav,
     .btn-primary {
         display: none;
@@ -1161,6 +1162,7 @@
         margin-bottom: 40px;
     }
 }
+
 /* Все устройства меньше 420px — универсальные правки для футера */
 @media (max-width: 480px) {
     .site-footer__inner {
@@ -1252,48 +1254,82 @@
         font-size: 10px;
     }
 }
-/* Mobile menu open state */
-.main-nav.show {
-    display: flex !important;
-    position: fixed;
-    top: 76px;
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
-    padding: 20px;
-    z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
 
-.btn-primary.show {
-    display: flex !important;
-}
+/* ==================== БУРГЕР-МЕНЮ (ТОЛЬКО МЕНЮ, КНОПКА СКРЫТА) ==================== */
 
-.main-nav.show .main-nav__list {
-    flex-direction: column;
-    gap: 20px;
-}
-
+/* На мобильных кнопка скрыта, меню выезжает центрированным */
 @media (max-width: 768px) {
     .main-nav.show {
+        display: flex !important;
+        position: fixed;
         top: 64px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;
+        max-width: 350px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 16px;
+        z-index: 1000;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        animation: slideDown 0.25s ease forwards;
+    }
+
+    .main-nav.show .main-nav__list {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .main-nav.show .main-nav__link {
+        justify-content: center;
+        width: 100%;
+        padding: 8px 0;
     }
 }
 
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Адаптивные отступы для разных экранов (переопределяем top) */
 @media (max-width: 414px) {
     .main-nav.show {
         top: 64px;
+        width: 90%;
+        max-width: 320px;
+        padding: 16px;
+    }
+    .main-nav.show .main-nav__list {
+        gap: 16px;
     }
 }
 
 @media (max-width: 375px) {
     .main-nav.show {
         top: 60px;
+        width: 92%;
+        max-width: 300px;
+        padding: 14px;
     }
 }
 
 @media (max-width: 320px) {
     .main-nav.show {
         top: 56px;
+        width: 95%;
+        padding: 12px;
+    }
+    .main-nav.show .main-nav__link {
+        font-size: 13px;
     }
 }
